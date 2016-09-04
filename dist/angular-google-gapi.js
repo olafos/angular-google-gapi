@@ -342,8 +342,8 @@
 
 (function() {
     'use strict';
-    angular.module('angular-google-gapi').factory('GClient', ['$document', '$q', '$window',
-        function ($document, $q, $window) {
+    angular.module('angular-google-gapi').factory('GClient', ['$document', '$q', '$timeout', '$window',
+        function ($document, $q, $timeout, $window) {
 
             var LOAD_GAE_API = false;
             var LOADING_GAE_API = false;
@@ -407,6 +407,7 @@
 
         }]);
 })();
+
 (function() {
     'use strict';
     angular.module('angular-google-gapi').factory('GData', ['$rootScope',
